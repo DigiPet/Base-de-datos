@@ -25,13 +25,13 @@ DROP TABLE IF EXISTS ESTADO;
 DROP TABLE IF EXISTS	ROL;
 
 CREATE TABLE ROL
-	(Id_rol					INT				NOT NULL		AUTO_INCREMENT,
+	(Id_rol					INT				NOT NULL,
 	Nombre					VARCHAR(20)		NOT NULL,
 	
 	PRIMARY KEY(Id_rol));
 	
 CREATE TABLE ESTADO
-	(Id_estado				INT				NOT NULL		AUTO_INCREMENT,
+	(Id_estado				INT				NOT NULL,
 	Nombre					VARCHAR(20)		NOT NULL,
 	
 	PRIMARY KEY(Id_estado));
@@ -51,7 +51,7 @@ CREATE TABLE USUARIO
 	UNIQUE(Email_1));
 	
 CREATE TABLE PROVINCIA
-	(Id_provincia			INT				NOT NULL		AUTO_INCREMENT,
+	(Id_provincia			INT				NOT NULL,
 	Nombre					VARCHAR(30)		NOT NULL,
 	
 	PRIMARY KEY(Id_provincia));
@@ -75,7 +75,7 @@ CREATE TABLE PAGO_X_CLIENTE
 	PRIMARY KEY(Id_cliente,Metodo_pago));
 
 CREATE TABLE UNIVERSIDAD
-	(Id_universidad		INT				NOT NULL		AUTO_INCREMENT,
+	(Id_universidad		INT				NOT NULL,
 	Nombre					VARCHAR(50)		NOT NULL,
 	
 	PRIMARY KEY(Id_universidad));
@@ -109,7 +109,7 @@ CREATE TABLE DISPONIBILIDAD_X_CUIDADOR
 	PRIMARY KEY(Id_disponibilidad));
 
 CREATE TABLE BADGE
-	(Id_badge				INT				NOT NULL		AUTO_INCREMENT,
+	(Id_badge				INT				NOT NULL,
 	Nombre					VARCHAR(30)		NOT NULL,
 	
 	PRIMARY KEY(Id_badge));
@@ -129,7 +129,7 @@ CREATE TABLE DENUNCIA
 	PRIMARY KEY(Id_denuncia));
 
 CREATE TABLE TAMANO
-	(Id_tamano				INT				NOT NULL		AUTO_INCREMENT,
+	(Id_tamano				INT				NOT NULL,
 	Nombre					VARCHAR(30)		NOT NULL,
 	
 	PRIMARY KEY(Id_tamano));
@@ -162,7 +162,7 @@ CREATE TABLE HOTEL
 	PRIMARY KEY(Id_hotel));
 
 CREATE TABLE SERVICIO
-	(Id_servicio			INT				NOT NULL		AUTO_INCREMENT,
+	(Id_servicio			INT				NOT NULL,
 	Nombre					VARCHAR(20)		NOT NULL,
 	Precio					INT				NOT NULL,
 	
