@@ -1,16 +1,16 @@
-INSERT INTO ROL (Nombre)
+INSERT INTO ROL (Id_rol, Nombre)
 VALUES
 	(1,'Administrador'),
 	(2,'Cliente'),
 	(3,'Cuidador');
 	
-INSERT INTO ESTADO (Nombre)
+INSERT INTO ESTADO (Id_estado, Nombre)
 VALUES
 	(1,'Activado'),
 	(2,'Desactivado'),
 	(3,'Bloqueado');
 	
-INSERT INTO PROVINCIA (Nombre)
+INSERT INTO PROVINCIA (Id_provincia, Nombre)
 VALUES
 	(1,'San Jose'),
 	(2,'Alajuela'),
@@ -20,27 +20,27 @@ VALUES
 	(6,'Puntarenas'),
 	(7,'Limon');
 	
-INSERT INTO UNIVERSIDAD (Nombre)
+INSERT INTO UNIVERSIDAD (Id_universidad, Nombre)
 VALUES
 	(1,'Instituto Tecnologico de Costa Rica'),
 	(2,'Universidad de Costa Rica'),
 	(3,'Universidad Nacional de Costa Rica');
 
-INSERT INTO BADGE (Nombre)
+INSERT INTO BADGE (Id_badge, Nombre)
 VALUES
 	(1,'50 Caminatas'),
 	(2,'100 Caminatas'),
 	(3,'500 Caminatas'),
 	(4,'Buen Servicio');
 	
-INSERT INTO TAMANO (Nombre)
+INSERT INTO TAMANO (Id_tamano, Nombre)
 VALUES
 	(1,'S'),
 	(2,'M'),
 	(3,'L'),
 	(4,'XL');
 	
-INSERT INTO SERVICIO (Nombre, Precio)
+INSERT INTO SERVICIO (Id_servicio, Nombre, Precio)
 VALUES
 	(1,'Caminata', 30);
 
