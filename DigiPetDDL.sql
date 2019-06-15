@@ -45,7 +45,9 @@ CREATE TABLE USUARIO
 	Email_1					VARCHAR(30)		NOT NULL,
 	Contrasena				VARCHAR(8)		NOT NULL,
 	Foto_perfil				VARCHAR(30)		NOT NULL,
-	Id_estado					INT				NOT NULL,
+	Id_estado				INT				NOT NULL,
+	
+	CONSTRAINT Chk_contrasena CHECK (LENGTH(Contrasena) >= 4),
 	
 	PRIMARY KEY(Id_usuario),
 	UNIQUE(Email_1));
@@ -106,6 +108,8 @@ CREATE TABLE DISPONIBILIDAD_X_CUIDADOR
 	Fecha_hora_inicio		DATETIME			NOT NULL,
 	Fecha_hora_final		DATETIME			NOT NULL,
 	
+	CONSTRAINT Chk_hi_hf CHECK (Fecha_hora_inicio < Fecha_hora_final),
+	
 	PRIMARY KEY(Id_disponibilidad));
 
 CREATE TABLE BADGE
@@ -124,7 +128,7 @@ CREATE TABLE DENUNCIA
 	(Id_denuncia			INT				NOT NULL		AUTO_INCREMENT,
 	Id_cliente				INT				NOT NULL,
 	Id_cuidador				INT				NOT NULL,
-	Denuncia					VARCHAR(300)	NOT NULL,
+	Descripcion				VARCHAR(300)	NOT NULL,
 	
 	PRIMARY KEY(Id_denuncia));
 
@@ -142,7 +146,7 @@ CREATE TABLE MASCOTA
 	Edad						INT				NOT NULL,
 	Id_tamano				INT				NOT NULL,
 	Descripcion				VARCHAR(300)	NOT NULL,
-	Fecha_Inscripcion		DATE				NOT NULL,
+	Fecha_inscripcion		DATE				NOT NULL,
 	
 	PRIMARY KEY(Id_mascota));
 
@@ -166,6 +170,8 @@ CREATE TABLE SERVICIO
 	Nombre					VARCHAR(20)		NOT NULL,
 	Precio					INT				NOT NULL,
 	
+	CONSTRAINT Chk_precio CHECK (Precio > 0),
+	
 	PRIMARY KEY(Id_servicio));
 
 CREATE TABLE SOLICITUD
@@ -173,13 +179,14 @@ CREATE TABLE SOLICITUD
 	Hora_inicio				DATETIME 		NOT NULL,
 	Hora_final				DATETIME			NOT NULL,
 	Duracion					INT				NOT NULL,
-	Estado					VARCHAR(10)		NOT NULL,
+	Estado_solicitud		VARCHAR(10)		NOT NULL,
 	Precio_unitario		DECIMAL(5,1)	NOT NULL,
 	Id_cliente				INT				NOT NULL,
 	Id_mascota				INT				NOT NULL,
 	Id_servicio				INT				NOT NULL,
 	
-	CONSTRAINT Chk_duracion CHECK(Duracion <= 8),
+	CONSTRAINT Chk_duracion1 CHECK (Duracion > 0),
+	CONSTRAINT Chk_duracion2 CHECK (Duracion <= 8),
 	
 	PRIMARY KEY(Id_solicitud));
 
@@ -201,13 +208,18 @@ CREATE TABLE SOLICITUD_X_HOTEL
 
 
 CREATE TABLE REPORTE
-	(Id_reporte				INT				NOT NULL,
+	(Id_reporte				INT				NOT NULL		AUTO_INCREMENT,
 	Cantidad_caca			INT				NOT NULL,
 	Cantidad_orines		INT				NOT NULL,
 	Cantidad_juegos		INT				NOT NULL,
 	Distancia				DECIMAL(2,1)	NOT NULL,
 	Detalles					VARCHAR(300)	NOT NULL,
 	Id_solicitud			INT				NOT NULL,
+	
+	CONSTRAINT Chk_caca CHECK (Cantidad_caca >= 0),
+	CONSTRAINT Chk_orines CHECK (Cantidad_orines >= 0),
+	CONSTRAINT Chk_juegos CHECK (Cantidad_juegos >= 0),
+	CONSTRAINT Chk_distancia CHECK (Distancia > 0),
 	
 	PRIMARY KEY(Id_reporte));
 
@@ -221,8 +233,10 @@ CREATE TABLE FOTO_X_REPORTE
 	
 ALTER TABLE USUARIO ADD FOREIGN KEY (Id_rol)	REFERENCES ROL(Id_rol);
 ALTER TABLE USUARIO ADD FOREIGN KEY (Id_estado) REFERENCES ESTADO(Id_estado);
+ALTER TABLE CLIENTE ADD FOREIGN KEY (Id_cliente) REFERENCES USUARIO (Id_usuario);
 ALTER TABLE CLIENTE ADD FOREIGN KEY (Id_provincia)	REFERENCES PROVINCIA(Id_provincia);
 ALTER TABLE PAGO_X_CLIENTE ADD FOREIGN KEY (Id_cliente)	REFERENCES CLIENTE(Id_cliente);
+ALTER TABLE CUIDADOR ADD FOREIGN KEY (Id_cuidador) REFERENCES USUARIO(Id_usuario);
 ALTER TABLE CUIDADOR ADD FOREIGN KEY (Id_universidad) REFERENCES UNIVERSIDAD(Id_universidad);
 ALTER TABLE PROVINCIA_X_CUIDADOR ADD FOREIGN KEY (Id_cuidador) REFERENCES CUIDADOR(Id_cuidador);
 ALTER TABLE PROVINCIA_X_CUIDADOR ADD FOREIGN KEY (Id_provincia) REFERENCES PROVINCIA(Id_provincia);
