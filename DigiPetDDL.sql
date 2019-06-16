@@ -77,7 +77,7 @@ CREATE TABLE PAGO_X_CLIENTE
 	PRIMARY KEY(Id_cliente,Metodo_pago));
 
 CREATE TABLE UNIVERSIDAD
-	(Id_universidad		INT				NOT NULL,
+	(Id_universidad		INT				NOT NULL		AUTO_INCREMENT,
 	Nombre					VARCHAR(50)		NOT NULL,
 	
 	PRIMARY KEY(Id_universidad));
@@ -178,9 +178,9 @@ CREATE TABLE SOLICITUD
 	(Id_solicitud			INT				NOT NULL		AUTO_INCREMENT,
 	Hora_inicio				DATETIME 		NOT NULL,
 	Hora_final				DATETIME			NOT NULL,
-	Duracion					INT				NOT NULL,
+	Duracion					DECIMAL			NOT NULL,
 	Estado_solicitud		VARCHAR(10)		NOT NULL,
-	Precio_unitario		DECIMAL(5,1)	NOT NULL,
+	Precio_unitario		DECIMAL			NOT NULL,
 	Id_cliente				INT				NOT NULL,
 	Id_mascota				INT				NOT NULL,
 	Id_servicio				INT				NOT NULL,
@@ -193,7 +193,7 @@ CREATE TABLE SOLICITUD
 CREATE TABLE SOLICITUD_X_CUIDADOR
 	(Id_solicitud			INT				NOT NULL,
 	Id_cuidador				INT				NOT NULL,
-	Calificacion			DECIMAL(1,1)	NOT NULL,
+	Calificacion			DECIMAL			NOT NULL,
 	Metodo_pago				VARCHAR(30)		NOT NULL,
 	Direccion				VARCHAR(300)	NOT NULL,
 	Descripcion				VARCHAR(300)	NOT NULL,
@@ -209,10 +209,11 @@ CREATE TABLE SOLICITUD_X_HOTEL
 
 CREATE TABLE REPORTE
 	(Id_reporte				INT				NOT NULL		AUTO_INCREMENT,
+	Duracion					DECIMAL			NOT NULL,
 	Cantidad_caca			INT				NOT NULL,
 	Cantidad_orines		INT				NOT NULL,
 	Cantidad_juegos		INT				NOT NULL,
-	Distancia				DECIMAL(2,1)	NOT NULL,
+	Distancia				DECIMAL			NOT NULL,
 	Detalles					VARCHAR(300)	NOT NULL,
 	Id_solicitud			INT				NOT NULL,
 	
@@ -225,7 +226,7 @@ CREATE TABLE REPORTE
 
 CREATE TABLE FOTO_X_REPORTE
 	(Id_reporte				INT				NOT NULL,
-	Foto						INT				NOT NULL,
+	Foto						VARCHAR(30)		NOT NULL,
 	
 	PRIMARY KEY(Id_reporte,Foto));
 	
