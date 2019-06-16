@@ -6,30 +6,30 @@ VALUES
 	
 INSERT INTO ESTADO (Id_estado, Nombre)
 VALUES
-	(1,'Activado'),
-	(2,'Desactivado'),
-	(3,'Bloqueado');
+	(0,'Activado'),
+	(1,'Desactivado'),
+	(2,'Bloqueado');
 	
 INSERT INTO USUARIO (Primer_nombre, Primer_apellido, Segundo_apellido, Id_rol, Email_1, Contrasena, Foto_perfil, Id_estado)
 VALUES
-	('Milton', 'Villegas', ' ', 1, 'miltonv@digipet.com', 'admin', 'milton.png', 1),
-	('Fabian', 'Gonzalez', 'Araya', 2, 'fabiang@tec.com', '123456', 'fabian.png', 1),
-	('Arturo', 'Cordoba', 'Villalobos', 2, 'arturoc@tec.com', '987654', 'arturo.png', 1),
-	('Mélinda', 'Garbutt', 'Montacute', 3, 'nmontacute0@goo.gl', '87c1Dg', 'QuamFringilla.png', 1),
- 	('Agnès', 'Szymanowski', 'Dreossi', 3, 'ddreossi1@msu.edu', '04gOmbG', 'NisiVenenatis.jpeg', 1),
- 	('Aí', 'Slark', 'Brahmer', 3, 'lbrahmer2@gmail.com', '34xkc', 'AcNulla.tiff', 1),
- 	('Cunégonde', 'Songest', 'Mishaw', 3, 'lmishaw3@vk.com', '6213s', 'InHacHabitasse.png', 1),
- 	('Loïs', 'Burkin', 'Zorzenoni', 3, 'ezorzenoni4@theatlantic.com', '36tiYF', 'Elementumisque.jpeg', 1),
- 	('Lóng', 'Richie', 'Gewer', 3, 'cgewer5@flickr.com', '38k1x', 'Libero.jpeg', 1),
- 	('Cunégonde', 'Flecknell', 'Rentalll', 3, 'jrentalll6@meetup.com', '34j80c', 'Mauris.tiff', 1),
- 	('Estée', 'Salkeld', 'Kardos-Stowe', 3, 'mkardosstowe7@wordpress.com', '71g0S', 'AnteIpsum.tiff', 1),
- 	('Angèle', 'Hearl', 'Cloughton', 3, 'hcloughton8@ftc.gov', '93u1eO', 'Eget.tiff', 1),
- 	('Nadège', 'Puckey', 'Zanuciolii', 3, 'azanuciolii9@dion.ne.jp', '545kjR', 'GravidaNisi.tiff', 1),
- 	('Dù', 'Brisker', 'Swinley', 3, 'tswinleya@ustream.tv', '31gfoG', 'OrciLuctus.jpeg', 1),
- 	('Céline', 'Stanistreet', 'Syddie', 3, 'msyddieb@dyndns.org', '66gffqiZ', 'NullaQuisqueArcu.tiff', 1),
- 	('Görel', 'Pllu', 'Buddock', 3, 'nbuddockc@census.gov', '70kfxL', 'Lacus.tiff', 1),
- 	('Åsa', 'Ledger', 'Ciepluch', 3, 'kciepluchd@printfriendly.com', '66f6F', 'Eget.gif', 1),
- 	('Judicaël', 'Bawles', 'Krzysztofiak', 3, 'kkrzysztofiake@parallels.com', 'sf52qL', 'Venenatisodales.tiff', 1);
+	('Milton', 'Villegas', ' ', 1, 'miltonv@digipet.com', 'admin', 'milton.png', 0),
+	('Fabian', 'Gonzalez', 'Araya', 2, 'fabiang@tec.com', '123456', 'fabian.png', 0),
+	('Arturo', 'Cordoba', 'Villalobos', 2, 'arturoc@tec.com', '987654', 'arturo.png', 0),
+	('Mélinda', 'Garbutt', 'Montacute', 3, 'nmontacute0@goo.gl', '87c1Dg', 'QuamFringilla.png', 0),
+ 	('Agnès', 'Szymanowski', 'Dreossi', 3, 'ddreossi1@msu.edu', '04gOmbG', 'NisiVenenatis.jpeg', 0),
+ 	('Aí', 'Slark', 'Brahmer', 3, 'lbrahmer2@gmail.com', '34xkc', 'AcNulla.tiff', 0),
+ 	('Cunégonde', 'Songest', 'Mishaw', 3, 'lmishaw3@vk.com', '6213s', 'InHacHabitasse.png', 0),
+ 	('Loïs', 'Burkin', 'Zorzenoni', 3, 'ezorzenoni4@theatlantic.com', '36tiYF', 'Elementumisque.jpeg', 2),
+ 	('Lóng', 'Richie', 'Gewer', 3, 'cgewer5@flickr.com', '38k1x', 'Libero.jpeg', 2),
+ 	('Cunégonde', 'Flecknell', 'Rentalll', 3, 'jrentalll6@meetup.com', '34j80c', 'Mauris.tiff', 2),
+ 	('Estée', 'Salkeld', 'Kardos-Stowe', 3, 'mkardosstowe7@wordpress.com', '71g0S', 'AnteIpsum.tiff', 2),
+ 	('Angèle', 'Hearl', 'Cloughton', 3, 'hcloughton8@ftc.gov', '93u1eO', 'Eget.tiff', 2),
+ 	('Nadège', 'Puckey', 'Zanuciolii', 3, 'azanuciolii9@dion.ne.jp', '545kjR', 'GravidaNisi.tiff', 0),
+ 	('Dù', 'Brisker', 'Swinley', 3, 'tswinleya@ustream.tv', '31gfoG', 'OrciLuctus.jpeg', 0),
+ 	('Céline', 'Stanistreet', 'Syddie', 3, 'msyddieb@dyndns.org', '66gffqiZ', 'NullaQuisqueArcu.tiff', 0),
+ 	('Görel', 'Pllu', 'Buddock', 3, 'nbuddockc@census.gov', '70kfxL', 'Lacus.tiff', 0),
+ 	('Åsa', 'Ledger', 'Ciepluch', 3, 'kciepluchd@printfriendly.com', '66f6F', 'Eget.gif', 0),
+ 	('Judicaël', 'Bawles', 'Krzysztofiak', 3, 'kkrzysztofiake@parallels.com', 'sf52qL', 'Venenatisodales.tiff', 0);
 
 	
 INSERT INTO PROVINCIA (Id_provincia, Nombre)
@@ -107,10 +107,14 @@ VALUES
 	(17,4),
 	(18,7);
 	
-/*
+
 INSERT INTO DISPONIBILIDAD_X_CUIDADOR (Id_cuidador, Fecha_hora_inicio, Fecha_hora_final)
 VALUES
-*/
+	(9,'2019/6/15 13:00:00', '2019/6/15 14:00:00'),
+	(15,'2019/6/15 13:00:00', '2019/6/15 14:00:00'),
+	(17,'2019/6/15 13:00:00', '2019/6/15 14:00:00'),
+	(8,'2019/6/15 13:00:00', '2019/6/15 14:00:00'),
+	(10,'2019/6/15 13:00:00', '2019/6/15 14:00:00');
 
 
 INSERT INTO BADGE (Id_badge, Nombre)
