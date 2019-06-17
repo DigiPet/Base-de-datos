@@ -108,8 +108,6 @@ CREATE TABLE DISPONIBILIDAD_X_CUIDADOR
 	Fecha_hora_inicio		DATETIME			NOT NULL,
 	Fecha_hora_final		DATETIME			NOT NULL,
 	
-	CONSTRAINT Chk_hi_hf CHECK (Fecha_hora_inicio < Fecha_hora_final),
-	
 	PRIMARY KEY(Id_disponibilidad));
 
 CREATE TABLE BADGE
