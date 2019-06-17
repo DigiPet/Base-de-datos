@@ -19,13 +19,13 @@ VALUES
  	('Agnès', 'Szymanowski', 'Dreossi', 3, 'ddreossi1@msu.edu', '04gOmbG', 'NisiVenenatis.jpeg', 0),
  	('Aí', 'Slark', 'Brahmer', 3, 'lbrahmer2@gmail.com', '34xkc', 'AcNulla.tiff', 0),
  	('Cunégonde', 'Songest', 'Mishaw', 3, 'lmishaw3@vk.com', '6213s', 'InHacHabitasse.png', 0),
- 	('Loïs', 'Burkin', 'Zorzenoni', 3, 'ezorzenoni4@theatlantic.com', '36tiYF', 'Elementumisque.jpeg', 2),
- 	('Lóng', 'Richie', 'Gewer', 3, 'cgewer5@flickr.com', '38k1x', 'Libero.jpeg', 2),
- 	('Cunégonde', 'Flecknell', 'Rentalll', 3, 'jrentalll6@meetup.com', '34j80c', 'Mauris.tiff', 2),
+ 	('Loïs', 'Burkin', 'Zorzenoni', 3, 'ezorzenoni4@theatlantic.com', '36tiYF', 'Elementumisque.jpeg',0 ),
+ 	('Lóng', 'Richie', 'Gewer', 3, 'cgewer5@flickr.com', '38k1x', 'Libero.jpeg', 0),
+ 	('Cunégonde', 'Flecknell', 'Rentalll', 3, 'jrentalll6@meetup.com', '34j80c', 'Mauris.tiff', 0),
  	('Estée', 'Salkeld', 'Kardos-Stowe', 3, 'mkardosstowe7@wordpress.com', '71g0S', 'AnteIpsum.tiff', 2),
  	('Angèle', 'Hearl', 'Cloughton', 3, 'hcloughton8@ftc.gov', '93u1eO', 'Eget.tiff', 2),
- 	('Nadège', 'Puckey', 'Zanuciolii', 3, 'azanuciolii9@dion.ne.jp', '545kjR', 'GravidaNisi.tiff', 0),
- 	('Dù', 'Brisker', 'Swinley', 3, 'tswinleya@ustream.tv', '31gfoG', 'OrciLuctus.jpeg', 0),
+ 	('Nadège', 'Puckey', 'Zanuciolii', 3, 'azanuciolii9@dion.ne.jp', '545kjR', 'GravidaNisi.tiff', 2),
+ 	('Dù', 'Brisker', 'Swinley', 3, 'tswinleya@ustream.tv', '31gfoG', 'OrciLuctus.jpeg', 2),
  	('Céline', 'Stanistreet', 'Syddie', 3, 'msyddieb@dyndns.org', '66gffqiZ', 'NullaQuisqueArcu.tiff', 0),
  	('Görel', 'Pllu', 'Buddock', 3, 'nbuddockc@census.gov', '70kfxL', 'Lacus.tiff', 0),
  	('Åsa', 'Ledger', 'Ciepluch', 3, 'kciepluchd@printfriendly.com', '66f6F', 'Eget.gif', 0),
@@ -169,7 +169,10 @@ VALUES
 /*
 INSERT INTO SOLICITUD_X_CUIDADOR (Id_solicitud, Id_cuidador, Calificacion, Metodo_pago, Direccion, Descripcion)
 VALUES
-*/
+	(1, 9, 4.0, 'Efectivo', 'Dir', 'Descrip'),
+	(2, 9, 4.0, 'Efectivo', 'Dir', 'Descrip'),
+	(3, 9, 4.0, 'Efectivo', 'Dir', 'Descrip');
+	*/
 
 /*
 INSERT INTO REPORTE (Cantidad_caca, Cantidad_orines, Cantidad_juegos, Distancia, Detalles, Id_solicitud)
